@@ -95,6 +95,7 @@ button.botao {
 @media screen and (max-width: 799px) {
 
     #nav {
+        z-index: 2;
         position: absolute;
         display: block;
         right: 0;
