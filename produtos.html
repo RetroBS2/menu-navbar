@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="ativo()">
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="./logo-.png" class="imagem">
+        </div>
+        <div class="menu">
+            <button id="fechar" class="botao" onclick="abrirFechar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-list bot" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" id="item-menu">Home</a></li>
+                    <li><a href="produtos.html" id="item-menu">Produtos</a></li>
+                    <li><a href="catalogo.html" id="item-menu">Catalogo</a></li>
+                    <li><a href="usuarios.html" id="item-menu">Usuarios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div tabindex="0" id="container" onclick="fechar()">
+        <h1>PRODUTOS</h1>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

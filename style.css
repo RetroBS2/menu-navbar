@@ -1,0 +1,144 @@
+:root {
+    --dark: rgba(0, 0, 0, 0.822);
+    --dark2: rgba(17, 17, 17, 0.822);
+    --shadow: rgba(0, 0, 0, 0.699);
+    --branco: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(49, 49, 49);
+}
+
+#container {
+    text-align: center;
+    color: var(--branco);
+    padding: 2rem;
+    filter: none;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    padding: 0 2rem;
+    background-color: var(--dark);
+    box-shadow: 0px 3px 2px var(--shadow);
+}
+
+.imagem {
+    width: 4rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: block;
+    list-style: none;
+}
+
+li {
+    margin: 1em;
+}
+
+li a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--branco);
+    padding: 5px;
+}
+
+li a:after {
+    opacity: 70%;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--branco);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button.botao {
+    display: none;
+    margin: .5rem .5rem .5rem auto;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: none;
+    color: var(--branco);
+    background-color: var(--dark);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.bot {
+    color: var(--branco);
+    width: 100%;
+    height: 60%;
+}
+
+@media screen and (max-width: 799px) {
+
+    #nav {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 3.2rem;
+        padding: 5rem 0 0 0;
+        text-align: center;
+        height: calc(100% - 8rem);
+        background-color: var(--dark);
+        box-shadow: 0px 3px 2px var(--shadow);
+        display: none;
+        margin-right: -100vh;
+        width: 16rem;
+        animation-duration: 1s;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-decoration: block;
+        list-style: none;
+        height: 100%;
+    }
+
+    ul li {
+        margin: 2rem;
+    }
+
+    button#fechar {
+        display: block;
+    }
+}
+
+@keyframes mostrarMenu {
+    from {
+        margin-right: -100vh;
+    }
+
+    to {
+        margin-right: 0vh;
+    }
+}
+
+
+.active {
+    background-color: var(--dark2);
+    border-radius: 4px;
+}
